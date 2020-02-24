@@ -1,0 +1,100 @@
+@import url('./common.css');
+@import url('https://fonts.googleapis.com/css?family=Dekko&display=swap');
+
+body {
+    font-family: 'Dekko', serif;
+}
+
+header {
+    position: relative;
+    padding-bottom: 4.5em;
+    background: radial-gradient(#eef, #00f);
+}
+
+header #avatar {
+    position: absolute;
+    right: 2em;
+    bottom: 1em;
+}
+
+header #subtitle {
+    display: none;
+}
+
+header h1 {
+    color: #ff0;
+}
+
+nav {
+    position: relative;
+    bottom: 2.2em;
+    z-index: 3;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    flex-shrink: 0;
+    background-color: #fe0;
+    box-shadow: inset 4px 4px 1px #fa0, inset -10px -15px 1px #fa0;
+    padding: 0;
+}
+
+nav li {
+    padding: 0.7em 1.5em;
+    border: 1px solid black;
+}
+
+section h2,
+section h3 {
+    font-weight: normal;
+}
+
+section h3 {
+    margin-bottom: 0.3em;
+}
+
+#history {
+    margin-left: 5em;
+}
+
+#skills {
+    margin-right: 5em;
+}
+
+aside {
+    background-color: #fc0;
+    margin: 1em;
+    padding: 1em;
+}
+
+aside h2 {
+    font-weight: normal;
+    text-align: center;
+}
+
+aside ul {
+    padding: 0;
+    text-align: center;
+    color: #08a;
+}
+
+aside li {
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+main::after {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: block;
+    padding: 1em 2em;
+    margin: 2em 0.5em 0 2em;
+    content: "Content!";
+    background-color: #f7c;
+    border-radius: 25px;
+}
