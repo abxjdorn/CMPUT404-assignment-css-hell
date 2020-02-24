@@ -6,14 +6,16 @@ body {
     background-color: #cdbdab;
 }
 
+body {
+    width: 10in;
+    margin: auto;
+}
+
 hr {
     display: none;
 }
 
-.book {
-    margin: 0;
-}
-
+h1,
 .title,
 .title2 {
     text-align: center;
@@ -37,45 +39,46 @@ hr {
     opacity: 0.75;
 }
 
-.book p,
-.book table {
+p,
+table {
     margin: 0.75em 0.5in;
 }
 
-.book table {
+table {
     margin-bottom: 0;
 }
 
-.book table p {
+table p {
     margin-left: 0;
 }
 
-.book table + br {
+table + br {
     display: none;
 }
 
-.book p:first-letter {
+p:first-letter {
     margin-left: 2em;
 }
 
-.book h4 + p:first-line {
+h4 + p:first-line,
+h3 + p:first-line {
     font-variant: small-caps;
 }
 
-.book h2,
-.book h3 {
+h2,
+h3 {
     display: flex;
     align-items: center;
 }
 
-.book h2 {
+h2 {
     margin-bottom: 0.25em;
 }
 
-.book h2::before,
-.book h2::after,
-.book h3::before,
-.book h3::after {
+h2::before,
+h2::after,
+h3::before,
+h3::after {
     content: "";
     flex-grow: 1;
     border-top: 2px solid rgba(0, 0, 0, 0.5);
@@ -84,13 +87,13 @@ hr {
     margin: 0 1em;
 }
 
-.book h3::before,
-.book h3::after {
+h3::before,
+h3::after {
     border-top: none;
     height: 0;
 }
 
-.book h2 + hr + h4 {
+h2 + hr + h4 {
     text-align: center;
     margin-top: 0;
 }
@@ -100,14 +103,24 @@ hr {
 .title h2::before,
 .title h2::after,
 .title2 h3:before,
-.title2 h3::after {
+.title2 h3::after,
+h3 + h3::before,
+h3 + h3::after,
+h1 + h3::before,
+h1 + h3::after,
+h1 + h3 + p + h3::before,
+h1 + h3 + p + h3::after {
     display: none;
 }
 
 .title2 h2,
 .title h2,
-.title2 h3 {
-    display: initial;
+.title2 h3,
+h3 + h3,
+h1 + h3,
+h1 + h3 + p + h3 {
+    display: block;
+    text-align: center;
 }
 
 .fig + h4 + p, .book + p {
@@ -118,6 +131,7 @@ body pre:first-child {
     border-bottom: 2px dashed black;
 }
 
+p + pre,
 .book + pre {
     border-top: 2px dashed black;
 }
