@@ -1,0 +1,128 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    background-color: #cdbdab;
+}
+
+hr {
+    display: none;
+}
+
+.book {
+    margin: 0;
+}
+
+.title,
+.title2 {
+    text-align: center;
+}
+
+.contents {
+    padding-left: 5em;
+}
+
+.fig {
+    margin: auto;
+    margin-top: 3em;
+    padding: 0.5em;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.fig + h4 {
+    text-align: center;
+    margin-top: 0.25em;
+    margin-bottom: 3em;
+    opacity: 0.75;
+}
+
+.book p,
+.book table {
+    margin: 0.75em 0.5in;
+}
+
+.book table {
+    margin-bottom: 0;
+}
+
+.book table p {
+    margin-left: 0;
+}
+
+.book table + br {
+    display: none;
+}
+
+.book p:first-letter {
+    margin-left: 2em;
+}
+
+.book h4 + p:first-line {
+    font-variant: small-caps;
+}
+
+.book h2,
+.book h3 {
+    display: flex;
+    align-items: center;
+}
+
+.book h2 {
+    margin-bottom: 0.25em;
+}
+
+.book h2::before,
+.book h2::after,
+.book h3::before,
+.book h3::after {
+    content: "";
+    flex-grow: 1;
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    height: 3px;
+    margin: 0 1em;
+}
+
+.book h3::before,
+.book h3::after {
+    border-top: none;
+    height: 0;
+}
+
+.book h2 + hr + h4 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.title2 h2::before,
+.title2 h2::after,
+.title h2::before,
+.title h2::after,
+.title2 h3:before,
+.title2 h3::after {
+    display: none;
+}
+
+.title2 h2,
+.title h2,
+.title2 h3 {
+    display: initial;
+}
+
+.fig + h4 + p, .book + p {
+    display: none;
+}
+
+body pre:first-child {
+    border-bottom: 2px dashed black;
+}
+
+.book + pre {
+    border-top: 2px dashed black;
+}
+
+body > h4 {
+    margin: 1em 2em;
+    text-align: center;
+}
